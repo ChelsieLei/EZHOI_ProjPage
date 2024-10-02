@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Paper Title</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            padding-bottom: 50px;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .authors, .abstract, .results {
+            text-align: center;
+        }
+        .figure img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .cite {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning</h1>
+</header>
+
+<div class="content">
+    <!-- Author List Section -->
+    <section class="section authors">
+        <h2>Authors</h2>
+        <p>
+            <a href="https://chelsielei.github.io/" target="_blank">Qinqian Lei</a> | 
+            <a href="https://hawkrsrch.github.io/" target="_blank">Bo Wang</a> | 
+            <a href="https://tanrobby.github.io/index.html" target="_blank">Robby T. Tan</a> 
+        </p>
+    </section>
+
+    <!-- Code Link Section -->
+    <section class="section code">
+        <h2>Code</h2>
+        <p>
+            <a href="https://github.com/ChelsieLei/EZ-HOI" target="_blank">View Code on GitHub</a>
+        </p>
+    </section>
+
+    <!-- Abstract Section -->
+    <section class="section abstract">
+        <h2>Abstract</h2>
+        <p>
+            Detecting human-object interactions (HOI) in zero-shot settings, where models must handle unseen classes, poses significant challenges. Existing methods that rely on aligning visual encoders with large Vision-Language Models (VLMs) to tap into the extensive knowledge of VLMs, require large, computationally expensive models and encounter training difficulties. Adapting VLMs with prompt learning offers an alternative to direct alignment. However, fine-tuning on task-specific datasets often leads to overfitting to seen classes and suboptimal performance on unseen classes, due to the absence of unseen class labels. To address these challenges, we introduce EZ-HOI, a novel prompt learning-based framework for efficient zero-shot HOI detection. First, we introduce LLM and VLM guidance for learnable prompts to enrich the prompt knowledge and benefit the adaptation to HOI tasks. However, because training datasets contain seen-class labels alone, fine-tuning VLMs on such datasets tends to optimize text prompts for seen classes instead of unseen ones. Therefore, we design text prompt learning for unseen classes by learning from related seen classes. Considering the difference between unseen and related seen classes, large language models (LLM) are utilized to provide the disparity information to further improve prompt learning for unseen classes. Quantitative evaluations on benchmark datasets demonstrate that our EZ-HOI achieves state-of-the-art performance across various zero-shot settings with only 10.35% to 33.95% of the trainable parameters compared to existing methods.
+        </p>
+    </section>
+
+    <!-- Teaser Figure Section (OPTION 1: After Abstract) -->
+    <section class="section figure">
+        <h2>Teaser Figure</h2>
+        <p>An Efficient Zero-shot HOI detection method with good generalization ability to unseen classes and small computational cost.</p>
+        <img src="./imgs/teaser.jpg" alt="Teaser Figure">
+    </section>
+
+    <!-- Pipeline Figure and Illustration Section -->
+    <section class="section figure">
+        <h2>Pipeline and Illustration</h2>
+        <p>Below is the pipeline diagram of the proposed method:</p>
+        <img src="./imgs/pipeline.jpg" alt="Pipeline Figure">
+    </section>
+
+    <!-- Results Section -->
+    <section class="section results">
+        <h2>Qualitative and Quantitative Results</h2>
+
+        <h3>Qualitative Results</h3>
+        <p>Here are some qualitative results of our method:</p>
+        <img src="./imgs/vis_result_main.jpg" alt="Qualitative Results">
+
+        <!-- <h3>Quantitative Results</h3>
+        <p>Here are the key quantitative results of our paper:</p>
+        <img src="quantitative_results.png" alt="Quantitative Results"> -->
+    </section>
+
+    <!-- Citation Format Section -->
+    <section class="section citation">
+        <h2>Citation</h2>
+        <p class="cite">
+            Qinqian Lei, Bo Wang, Robby T. Tan. Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning. Advances in Neural Information Processing Systems, 2024
+        </p>
+        <p>Here is the BibTeX entry for citation:</p>
+        <pre>
+@inproceedings{
+    lei2024efficient,
+    title={Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning},
+    author={Lei, Qinqian and Wang, Bo and Robby T., Tan},
+    booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+    year={2024}
+    }
+        </pre>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Qinqian Lei. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
