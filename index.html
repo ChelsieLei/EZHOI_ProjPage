@@ -3,84 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Paper Title</title>
+    <title>EZHOI: Efficient Zero-shot Human-Object Interaction</title>
+    <link rel="stylesheet" href="style.css"> <!-- Include a CSS file if necessary -->
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
+            font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            padding-bottom: 50px;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
         }
-        .content {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
+        h2 {
+            font-size: 24px;
+            color: #555;
         }
-        h1, h2 {
-            text-align: center;
+        .authors {
+            margin-bottom: 20px;
         }
-        .section {
+        .authors a {
+            text-decoration: none;
+            color: #1a73e8; /* Blue color for author links */
+            font-weight: bold;
+        }
+        .affiliations {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .conference {
+            color: purple;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: #ffdb58;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
             margin-bottom: 40px;
         }
-        .authors, .abstract, .results {
-            text-align: center;
-        }
-        .figure img {
-            width: 100%;
-            max-width: 600px;
-            display: block;
-            margin: 0 auto;
-        }
-        footer {
+        .buttons a {
             background-color: #333;
             color: white;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        a {
-            color: #4CAF50;
+            padding: 10px 20px;
             text-decoration: none;
+            border-radius: 5px;
         }
-        .cite {
-            font-style: italic;
+        .buttons a:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
 
-<header>
+    <!-- Paper Title -->
     <h1>Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning</h1>
-</header>
 
-<div class="content">
-    <!-- Author List Section -->
-    <section class="section authors">
-        <h2>Authors</h2>
-        <p>
-            <a href="https://chelsielei.github.io/" target="_blank">Qinqian Lei</a> | 
-            <a href="https://hawkrsrch.github.io/" target="_blank">Bo Wang</a> | 
-            <a href="https://tanrobby.github.io/index.html" target="_blank">Robby T. Tan</a> 
-        </p>
-    </section>
+    <!-- Authors with personal websites -->
+    <div class="authors">
+        <a href="https://chelsielei.github.io/" target="_blank">Qinqian Lei</a>, 
+        <a href="https://hawkrsrch.github.io/" target="_blank">Bo Wang</a>, 
+        <a href="https://tanrobby.github.io/index.html" target="_blank">Robby T. Tan</a>
+    </div>
 
-    <!-- Code Link Section -->
-    <section class="section code">
-        <h2>Code</h2>
-        <p>
-            <a href="https://github.com/ChelsieLei/EZ-HOI" target="_blank">View Code on GitHub</a>
-        </p>
-    </section>
+    <!-- Affiliations -->
+    <div class="affiliations">
+        <sup>1</sup>National University of Singapore, <sup>2</sup>University of Mississippi, <sup>3</sup>ASUS Intelligent Cloud Services (AICS)
+    </div>
+    <!-- Conference info -->
+    <div class="conference">
+        NeurIPS 2024, Vancouver
+    </div>
+
+    <!-- Buttons for external links -->
+    <div class="buttons">
+        <a href="https://arxiv.org" target="_blank">arXiv</a>
+        <!-- <a href="https://video-link.com" target="_blank">Video</a> -->
+        <!-- <a href="https://slides-link.com" target="_blank">Slides</a> -->
+        <a href="https://github.com/ChelsieLei/EZ-HOI" target="_blank">Code</a>
+    </div>
+
+
+    <!-- Teaser Image (placed right before abstract) -->
+    <img src="./imgs/teaser.jpg" alt="An Efficient Zero-shot HOI detection method with good generalization ability to unseen classes and small computational cost" style="width:80%; max-width:800px; margin-bottom: 30px;">
+
+
+    <!-- Paper Abstract
+    <h2>Abstract</h2>
+    <p style="width: 80%; margin: 0 auto; font-size: 18px; line-height: 1.6;">
+        Detecting human-object interactions (HOI) in zero-shot settings, where models must handle unseen classes, poses significant challenges. Existing methods that rely on aligning visual encoders with large Vision-Language Models (VLMs) to tap into the extensive knowledge of VLMs, require large, computationally expensive models and encounter training difficulties. Adapting VLMs with prompt learning offers an alternative to direct alignment. However, fine-tuning on task-specific datasets often leads to overfitting to seen classes and suboptimal performance on unseen classes, due to the absence of unseen class labels. To address these challenges, we introduce EZ-HOI, a novel prompt learning-based framework for efficient zero-shot HOI detection. First, we introduce LLM and VLM guidance for learnable prompts to enrich the prompt knowledge and benefit the adaptation to HOI tasks. However, because training datasets contain seen-class labels alone, fine-tuning VLMs on such datasets tends to optimize text prompts for seen classes instead of unseen ones. Therefore, we design text prompt learning for unseen classes by learning from related seen classes. Considering the difference between unseen and related seen classes, large language models (LLM) are utilized to provide the disparity information to further improve prompt learning for unseen classes. Quantitative evaluations on benchmark datasets demonstrate that our EZ-HOI achieves state-of-the-art performance across various zero-shot settings with only 10.35% to 33.95% of the trainable parameters compared to existing methods.
+    </p> -->
+
 
     <!-- Abstract Section -->
     <section class="section abstract">
