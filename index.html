@@ -259,9 +259,9 @@
           </p>
           <p>
             To address these challenges, we introduce EZ-HOI, a novel prompt learning-based framework for efficient zero-shot HOI detection. 
-            First, we introduce LLM and VLM guidance for learnable prompts to enrich the prompt knowledge and benefit the adaptation to HOI tasks. 
-            However, because training datasets contain seen-class labels alone, fine-tuning VLMs on such datasets tends to optimize text prompts for seen classes instead of unseen ones. 
-            Therefore, we design text prompt learning for unseen classes by learning from related seen classes. Considering the difference between unseen and related seen classes, large language models (LLM) are utilized to provide the disparity information to further improve prompt learning for unseen classes. 
+            First, we introduce large language model (LLM) and VLM guidance for learnable prompts to enrich the prompt knowledge and benefit the adaptation to HOI tasks.
+            However, because training datasets contain seen-class labels alone, fine-tuning VLMs on such datasets tends to optimize learnable prompts for seen classes instead of unseen ones. 
+            Therefore, we design prompt learning for unseen classes by learning from related seen classes. To facilitate the learning process, LLMs are utilized to provide the differences between unseen and related seen classes.
             Quantitative evaluations on benchmark datasets demonstrate that our EZ-HOI achieves state-of-the-art performance across various zero-shot settings with only 10.35% to 33.95% of the trainable parameters compared to existing methods.
           </p>
 
