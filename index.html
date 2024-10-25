@@ -270,17 +270,6 @@
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
   </div>
 </section>
 
@@ -336,7 +325,22 @@
         <div class="content has-text-centered">
         <img src="./imgs/pipeline.jpg" alt="Framework overview" style="width:80%; max-width:800px; margin-bottom: 30px;">
         </div>
-       
+
+ <div class="content has-text-justified">
+          <p>
+           Overview of our proposed EZ-HOI framework.
+          </p>
+          <p>
+           Learnable text prompts capture detailed HOI class information from the LLM. To enhance their generalization ability, we introduce the
+          Unseen Text Prompt Learning (UTPL) module. Meanwhile, visual learnable prompts are guided by a
+          frozen VLM visual encoder. These learnable text and visual prompts are then separately input into
+          the text and visual encoder. Finally, HOI predictions are made by calculating the cosine similarity
+          between the text encoder output and the HOI image features.
+          </p>
+
+        </div>
+
+          
         <br/>
 
       </div>
