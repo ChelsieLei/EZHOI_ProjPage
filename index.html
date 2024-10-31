@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning">
+        content="EZ-HOI: VLM Adaptation via Guided Prompt Learning for Zero-Shot HOI Detection">
   <meta name="keywords" content="Zero-shot detection, Human-object interaction detection, Prompt learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning</title>
+  <title>EZ-HOI: VLM Adaptation via Guided Prompt Learning for Zero-Shot HOI Detection</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -88,7 +88,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning</h1>
+          <h1 class="title is-1 publication-title">EZ-HOI: VLM Adaptation via Guided Prompt Learning for Zero-Shot HOI Detection</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">NeurIPS 2024</span>
         </div>
@@ -253,16 +253,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Detecting human-object interactions (HOI) in zero-shot settings, where models must handle unseen classes, poses significant challenges. 
-            Existing methods that rely on aligning visual encoders with large Vision-Language Models (VLMs) to tap into the extensive knowledge of VLMs, require large, computationally expensive models and encounter training difficulties. 
-            Adapting VLMs with prompt learning offers an alternative to direct alignment. However, fine-tuning on task-specific datasets often leads to overfitting to seen classes and suboptimal performance on unseen classes, due to the absence of unseen class labels. 
+              Detecting human-object interactions (HOI) in zero-shot settings, where models must handle unseen classes, poses significant challenges. 
+              Existing methods that rely on aligning visual encoders with large Vision-Language Models (VLMs) to tap into the extensive knowledge of VLMs, require large, computationally expensive models and encounter training difficulties.
+              Adapting VLMs with prompt learning offers an alternative to direct alignment. However, fine-tuning on task-specific datasets often leads to overfitting to seen classes and suboptimal performance on unseen classes, due to the absence of unseen class labels. 
           </p>
           <p>
-            To address these challenges, we introduce EZ-HOI, a novel prompt learning-based framework for efficient zero-shot HOI detection. 
-            First, we introduce large language model (LLM) and VLM guidance for learnable prompts to enrich the prompt knowledge and benefit the adaptation to HOI tasks.
-            However, because training datasets contain seen-class labels alone, fine-tuning VLMs on such datasets tends to optimize learnable prompts for seen classes instead of unseen ones. 
-            Therefore, we design prompt learning for unseen classes by learning from related seen classes. To facilitate the learning process, LLMs are utilized to provide the differences between unseen and related seen classes.
-            Quantitative evaluations on benchmark datasets demonstrate that our EZ-HOI achieves state-of-the-art performance across various zero-shot settings with only 10.35% to 33.95% of the trainable parameters compared to existing methods.
+              To address these challenges, we introduce a novel prompt learning-based framework for Efficient Zero-Shot HOI detection (EZ-HOI). 
+              First, we introduce Large Language Model (LLM) and VLM guidance for learnable prompts, integrating detailed HOI descriptions and visual semantics to adapt VLMs to HOI tasks.
+              However, because training datasets contain seen-class labels alone, fine-tuning VLMs on such datasets tends to optimize learnable prompts for seen classes instead of unseen ones.
+              Therefore, we design prompt learning for unseen classes using information from related seen classes, with LLMs utilized to highlight the differences between unseen and related seen classes.
+              Quantitative evaluations on benchmark datasets demonstrate that our EZ-HOI achieves state-of-the-art performance across various zero-shot settings with only 10.35\% to 33.95\% of the trainable parameters compared to existing methods. 
           </p>
 
         </div>
@@ -410,7 +410,7 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>    @inproceedings{lei2024efficient,
-      title     = {Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning},
+      title     = {EZ-HOI: VLM Adaptation via Guided Prompt Learning for Zero-Shot HOI Detection},
       author    = {Lei, Qinqian and Wang, Bo and Robby T., Tan},
       booktitle = {The Thirty-eighth Annual Conference on Neural Information Processing Systems},
       year      = {2024}
